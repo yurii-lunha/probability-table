@@ -1,0 +1,27 @@
+{
+  "name": "com.ylunha.ars-unity-extension",
+  "version": "1.0.0",
+  "displayName": "Probability table",
+  "description": "A table from which you can get an element with a certain probability",
+  "unity": "2020.1",
+  "dependencies": {},
+  "keywords": [
+    "tool",
+    "math",
+    "random"
+  ],
+  "author": {
+    "name": "Yurii Lunha",
+    "email": "iurylunga@gmail.com",
+    "url": "https://github.com/YLUNHA"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YLUNHA/probability-table"
+  },
+  "bugs": {
+    "url": "https://github.com/YLUNHA/probability-table/issues",
+    "email": "iurylunga@gmail.com"
+  },
+  "homepage": "https://github.com/YLUNHA"
+}
