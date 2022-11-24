@@ -1,10 +1,12 @@
 {
-  "name": "com.ylunha.ars-unity-extension",
+  "name": "com.ylunha.ars-probability-table",
   "version": "1.0.0",
   "displayName": "Probability table",
   "description": "A table from which you can get an element with a certain probability",
   "unity": "2020.1",
-  "dependencies": {},
+  "dependencies": {
+    "com.ylunha.ars-unity-extension": "1.0.0"
+  },
   "keywords": [
     "tool",
     "math",
