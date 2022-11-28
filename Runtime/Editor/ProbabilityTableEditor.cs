@@ -20,7 +20,7 @@ namespace Ars.ProbabilityTable
             base.OnInspectorGUI();
 
             var table = target as ProbabilityTable;
-            var probabilitySum = table.ProbabilityItems.Sum(i => i.probability);
+            var probabilitySum = table.ProbabilityItems.Sum(i => i.Probability);
             var is50 = probabilitySum / table.ProbabilityItems.Count == 50;
 
             var color = new Color(1f, 0.45f, 0.07f);

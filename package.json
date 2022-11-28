@@ -1,6 +1,6 @@
 {
   "name": "com.ylunha.ars-probability-table",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "Probability table",
   "description": "A table from which you can get an element with a certain probability",
   "unity": "2020.1",

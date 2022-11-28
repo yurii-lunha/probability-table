@@ -7,9 +7,9 @@ namespace Ars.ProbabilityTable
 {
     public class ProbabilityTable : MonoBehaviour
     {
-        [SerializeField] List<ProbabilityItem> probabilityItems = new();
+        [SerializeField] List<ProbabilityItem> m_ProbabilityItems = new();
 
-        public List<ProbabilityItem> ProbabilityItems => probabilityItems;
+        public List<ProbabilityItem> ProbabilityItems => m_ProbabilityItems;
 
         /// <summary>
         ///     Return random item based on probability
@@ -17,14 +17,14 @@ namespace Ars.ProbabilityTable
         /// <returns><see cref="ProbabilityItem" /> - as result you can use itemBehaviour or itemObject.</returns>
         public ProbabilityItem GetRandom()
         {
-            var sortedItems = probabilityItems.OrderBy(i => i.probability);
+            var sortedItems = m_ProbabilityItems.OrderBy(i => i.Probability);
             var value = Random.Range(1, 101);
             var step = 0;
             var itemsInRange = new List<ProbabilityItem>();
 
             foreach (var item in sortedItems)
             {
-                if (!itemsInRange.Any()) step += item.probability;
+                if (!itemsInRange.Any()) step += item.Probability;
 
                 if (value <= step) itemsInRange.Add(item);
             }
@@ -33,7 +33,7 @@ namespace Ars.ProbabilityTable
 
             if (itemsInRange.Any()) return itemsInRange.First();
 
-            return probabilityItems.Any() ? probabilityItems.First() : null;
+            return m_ProbabilityItems.Any() ? m_ProbabilityItems.First() : null;
         }
     }
 }
