@@ -36,7 +36,7 @@ namespace Ars.ProbabilityTable
             else if (is50)
                 text += " - Equal";
             else
-                text += " - Disbalance";
+                text += " - Imbalance";
 
             GUILayout.Label(text, _labelsStyle);
         }
