@@ -1,7 +1,9 @@
 ﻿#if UNITY_EDITOR
+using System;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 namespace Ars.ProbabilityTable
 {
@@ -20,8 +22,15 @@ namespace Ars.ProbabilityTable
             base.OnInspectorGUI();
 
             var table = target as ProbabilityTable;
+
+            if (!table)
+            {
+                throw new InvalidCastException();
+            }
+
+            var itemCount = table.ProbabilityItems.Any() ? table.ProbabilityItems.Count : 1;
             var probabilitySum = table.ProbabilityItems.Sum(i => i.Probability);
-            var is50 = probabilitySum / table.ProbabilityItems.Count == 50;
+            var is50 = probabilitySum / itemCount == 50;
 
             var color = new Color(1f, 0.45f, 0.07f);
 
