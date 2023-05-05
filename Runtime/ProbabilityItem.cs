@@ -13,14 +13,34 @@ namespace Ars.ProbabilityTable
         [SerializeField] int m_ItemInt;
         [SerializeField] float m_ItemFlt;
 
-        public int Probability => m_Probability;
+        public int Probability
+        {
+            get => m_Probability;
+            set => m_Probability = value;
+        }
 
-        public MonoBehaviour ItemBehaviour => m_ItemBehaviour;
+        public MonoBehaviour ItemBehaviour
+        {
+            get => m_ItemBehaviour;
+            set => m_ItemBehaviour = value;
+        }
 
-        public GameObject ItemObject => m_ItemObject;
+        public GameObject ItemObject
+        {
+            get => m_ItemObject;
+            set => m_ItemObject = value;
+        }
 
-        public int ItemInt => m_ItemInt;
+        public int ItemInt
+        {
+            get => m_ItemInt;
+            set => m_ItemInt = value;
+        }
 
-        public float ItemFlt => m_ItemFlt;
+        public float ItemFlt
+        {
+            get => m_ItemFlt;
+            set => m_ItemFlt = value;
+        }
     }
 }
